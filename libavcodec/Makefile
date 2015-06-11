@@ -13,6 +13,7 @@ HEADERS = avcodec.h                                                     \
           vda.h                                                         \
           vdpau.h                                                       \
           version.h                                                     \
+          videotoolbox.h                                                \
           vorbis_parser.h                                               \
           xvmc.h                                                        \
 
@@ -678,14 +679,17 @@ OBJS-$(CONFIG_DXVA2)                      += dxva2.o
 OBJS-$(CONFIG_VAAPI)                      += vaapi.o
 OBJS-$(CONFIG_VDA)                        += vda.o
 OBJS-$(CONFIG_VDPAU)                      += vdpau.o
+OBJS-$(CONFIG_VIDEOTOOLBOX)               += videotoolbox.o
 
 OBJS-$(CONFIG_H263_VAAPI_HWACCEL)         += vaapi_mpeg4.o
 OBJS-$(CONFIG_H263_VDPAU_HWACCEL)         += vdpau_mpeg4.o
+OBJS-$(CONFIG_H263_VIDEOTOOLBOX_HWACCEL)  += videotoolbox.o
 OBJS-$(CONFIG_H264_D3D11VA_HWACCEL)       += dxva2_h264.o
 OBJS-$(CONFIG_H264_DXVA2_HWACCEL)         += dxva2_h264.o
 OBJS-$(CONFIG_H264_VAAPI_HWACCEL)         += vaapi_h264.o
 OBJS-$(CONFIG_H264_VDA_HWACCEL)           += vda_h264.o
 OBJS-$(CONFIG_H264_VDPAU_HWACCEL)         += vdpau_h264.o
+OBJS-$(CONFIG_H264_VIDEOTOOLBOX_HWACCEL)  += videotoolbox.o
 OBJS-$(CONFIG_HEVC_D3D11VA_HWACCEL)       += dxva2_hevc.o
 OBJS-$(CONFIG_HEVC_DXVA2_HWACCEL)         += dxva2_hevc.o
 OBJS-$(CONFIG_MPEG1_VDPAU_HWACCEL)        += vdpau_mpeg12.o
@@ -694,9 +698,11 @@ OBJS-$(CONFIG_MPEG2_D3D11VA_HWACCEL)      += dxva2_mpeg2.o
 OBJS-$(CONFIG_MPEG2_DXVA2_HWACCEL)        += dxva2_mpeg2.o
 OBJS-$(CONFIG_MPEG2_VAAPI_HWACCEL)        += vaapi_mpeg2.o
 OBJS-$(CONFIG_MPEG2_VDPAU_HWACCEL)        += vdpau_mpeg12.o
+OBJS-$(CONFIG_MPEG2_VIDEOTOOLBOX_HWACCEL) += videotoolbox.o
 OBJS-$(CONFIG_MPEG2_XVMC_HWACCEL)         += mpegvideo_xvmc.o
 OBJS-$(CONFIG_MPEG4_VAAPI_HWACCEL)        += vaapi_mpeg4.o
 OBJS-$(CONFIG_MPEG4_VDPAU_HWACCEL)        += vdpau_mpeg4.o
+OBJS-$(CONFIG_MPEG4_VIDEOTOOLBOX_HWACCEL) += videotoolbox.o
 OBJS-$(CONFIG_VC1_D3D11VA_HWACCEL)        += dxva2_vc1.o
 OBJS-$(CONFIG_VC1_DXVA2_HWACCEL)          += dxva2_vc1.o
 OBJS-$(CONFIG_VC1_VAAPI_HWACCEL)          += vaapi_vc1.o
@@ -890,6 +896,7 @@ SKIPHEADERS-$(CONFIG_XVMC)             += xvmc.h
 SKIPHEADERS-$(CONFIG_VAAPI)            += vaapi_internal.h
 SKIPHEADERS-$(CONFIG_VDA)              += vda.h vda_internal.h
 SKIPHEADERS-$(CONFIG_VDPAU)            += vdpau.h vdpau_internal.h
+SKIPHEADERS-$(CONFIG_VIDEOTOOLBOX)     += videotoolbox.h
 
 TESTPROGS = imgconvert                                                  \
             mathops                                                    \

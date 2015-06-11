@@ -946,6 +946,9 @@ static enum AVPixelFormat get_pixel_format(H264Context *h, int force_callback)
             *fmt++ = AV_PIX_FMT_VDA_VLD;
             *fmt++ = AV_PIX_FMT_VDA;
 #endif
+#if CONFIG_H264_VIDEOTOOLBOX_HWACCEL
+            *fmt++ = AV_PIX_FMT_VIDEOTOOLBOX_VLD;
+#endif
             if (h->avctx->codec->pix_fmts)
                 choices = h->avctx->codec->pix_fmts;
             else if (h->avctx->color_range == AVCOL_RANGE_JPEG)

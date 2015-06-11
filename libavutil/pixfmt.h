@@ -166,6 +166,7 @@ enum AVPixelFormat {
     AV_PIX_FMT_YUV422P9BE, ///< planar YUV 4:2:2, 18bpp, (1 Cr & Cb sample per 2x1 Y samples), big-endian
     AV_PIX_FMT_YUV422P9LE, ///< planar YUV 4:2:2, 18bpp, (1 Cr & Cb sample per 2x1 Y samples), little-endian
     AV_PIX_FMT_VDA_VLD,    ///< hardware decoding through VDA
+    AV_PIX_FMT_VIDEOTOOLBOX_VLD,  ///< hardware decoding through VideoToolbox
 
 #ifdef AV_PIX_FMT_ABI_GIT_MASTER
     AV_PIX_FMT_RGBA64BE,  ///< packed RGBA 16:16:16:16, 64bpp, 16R, 16G, 16B, 16A, the 2-byte value for each R/G/B/A component is stored as big-endian

@@ -302,6 +302,7 @@ Hardware acceleration:
   libstagefright.cpp                    Mohamed Naufal
   vaapi*                                Gwenole Beauchesne
   vda*                                  Sebastien Zwickert
+  videotoolbox*                         Sebastien Zwickert
   vdpau*                                Carl Eugen Hoyos
 
 

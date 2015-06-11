@@ -1604,6 +1604,12 @@ const AVPixFmtDescriptor av_pix_fmt_descriptors[AV_PIX_FMT_NB] = {
         .log2_chroma_h = 1,
         .flags = AV_PIX_FMT_FLAG_HWACCEL,
     },
+    [AV_PIX_FMT_VIDEOTOOLBOX_VLD] = {
+        .name = "videotoolbox_vld",
+        .log2_chroma_w = 1,
+        .log2_chroma_h = 1,
+        .flags = AV_PIX_FMT_FLAG_HWACCEL,
+    },
     [AV_PIX_FMT_YA8] = {
         .name = "ya8",
         .nb_components = 2,
